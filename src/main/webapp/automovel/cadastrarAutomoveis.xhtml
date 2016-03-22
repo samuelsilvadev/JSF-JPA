@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<title>Cadastro de Automóveis</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:panelGrid columns="2" style="border:0px">
+			<p:outputLabel value="Marca" for="marca" />
+			<p:inputText id="marca" label="Marca" value="#{automovelBean.automovel.marca}" required="true"/>
+
+			<p:outputLabel value="Modelo" for="modelo" />
+			<p:inputText id="modelo" label="Modelo" value="#{automovelBean.automovel.modelo}" required="true"/>
+
+			<p:outputLabel value="Ano de Fabricação" for="anoDeFabricacao" />
+			<p:inputText id="anoDeFabricacao" label="Ano de Fabricação" value="#{automovelBean.automovel.anoFabricacao}" required="true"/>
+
+			<p:outputLabel value="Ano Modelo" for="anoModelo" />
+			<p:inputText id="anoModelo" label="Ano Modelo" value="#{automovelBean.automovel.anoModelo}" required="true"/>
+
+			<p:outputLabel value="Observações" for="observacoes" />
+			<p:inputTextarea id="observacoes" label="Observações" value="#{automovelBean.automovel.observacoes}" required="true"/>
+
+			<h:commandButton value="Salvar" action="#{automovelBean.salva()}"/>
+		</p:panelGrid>
+	</h:form>
+
+</h:body>
+</html>
+

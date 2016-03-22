@@ -9,8 +9,13 @@ import study.utils.JPAUtil;
 
 public class Automoveis {
 	EntityManager entityManager = JPAUtil.pegarEntityManager();
-	
-	public List<Automovel> listarTodos(){
+
+	public Automovel pegarPorId(long automovel) {
+		return entityManager.createQuery("from Automovel a where a.id = :id", Automovel.class)
+				.setParameter("id", automovel).getSingleResult();
+	}
+
+	public List<Automovel> listarTodos() {
 		return entityManager.createQuery("from Automovel", Automovel.class).getResultList();
-	} 
+	}
 }
