@@ -9,27 +9,33 @@
 </h:head>
 
 <h:body>
-	<h:form>
-		<p:panelGrid columns="2" style="border:0px">
-			<p:outputLabel value="Marca" for="marca" />
-			<p:inputText id="marca" label="Marca" value="#{automovelBean.automovel.marca}" required="true"/>
+	<p:panel header="Cadastro de Automóveis">
+		<h:form>
+			<p:panelGrid columns="2" style="border:0px">
+				<p:outputLabel value="Marca" for="marca" />
+				<p:inputText id="marca" label="Marca"
+					value="#{automovelBean.automovel.marca}" required="true" />
 
-			<p:outputLabel value="Modelo" for="modelo" />
-			<p:inputText id="modelo" label="Modelo" value="#{automovelBean.automovel.modelo}" required="true"/>
+				<p:outputLabel value="Modelo" for="modelo" />
+				<p:inputText id="modelo" label="Modelo"
+					value="#{automovelBean.automovel.modelo}" required="true" />
 
-			<p:outputLabel value="Ano de Fabricação" for="anoDeFabricacao" />
-			<p:inputText id="anoDeFabricacao" label="Ano de Fabricação" value="#{automovelBean.automovel.anoFabricacao}" required="true"/>
+				<p:outputLabel value="Ano de Fabricação" for="anoDeFabricacao" />
+				<p:inputText id="anoDeFabricacao" label="Ano de Fabricação"
+					value="#{automovelBean.automovel.anoFabricacao}" required="true" />
 
-			<p:outputLabel value="Ano Modelo" for="anoModelo" />
-			<p:inputText id="anoModelo" label="Ano Modelo" value="#{automovelBean.automovel.anoModelo}" required="true"/>
+				<p:outputLabel value="Ano Modelo" for="anoModelo" />
+				<p:inputText id="anoModelo" label="Ano Modelo"
+					value="#{automovelBean.automovel.anoModelo}" required="true" />
 
-			<p:outputLabel value="Observações" for="observacoes" />
-			<p:inputTextarea id="observacoes" label="Observações" value="#{automovelBean.automovel.observacoes}" required="true"/>
+				<p:outputLabel value="Observações" for="observacoes" />
+				<p:inputTextarea id="observacoes" label="Observações"
+					value="#{automovelBean.automovel.observacoes}" required="true" />
 
-			<h:commandButton value="Salvar" action="#{automovelBean.salva()}"/>
-		</p:panelGrid>
-	</h:form>
-
+				<h:commandButton value="Salvar" action="#{automovelBean.salva()}" />
+			</p:panelGrid>
+		</h:form>
+	</p:panel>
 </h:body>
 </html>
 
