@@ -11,13 +11,13 @@
 	<p:panel header="Listagem de Automóveis">
 		<h:form>
 			<p:dataTable value="#{automovelBean.automovels}" var="automovel">
-				<p:column>
+				<p:column headerText="Código">
 					#{automovel.id}
 				</p:column>
-				<p:column>
+				<p:column headerText="Marca">
 					#{automovel.marca}
 				</p:column>
-				<p:column>
+				<p:column headerText="Modelo">
 					#{automovel.modelo}
 				</p:column>
 			</p:dataTable>
