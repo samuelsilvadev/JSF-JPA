@@ -8,4 +8,7 @@
 		<param-name>primefaces.THEME</param-name>
 		<param-value>blitzer</param-value>
 	</context-param>
+	<listener>
+        <listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
+    </listener>
 </web-app>
