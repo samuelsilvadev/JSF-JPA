@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import study.java.model.Automovel;
 import study.utils.JPAUtil;
@@ -11,6 +12,10 @@ import study.utils.JPAUtil;
 @ManagedBean
 public class AutomovelBean {
 
+	public AutomovelBean() {
+		listarAutomoveis();
+	}
+	
 	private Automovel automovel = new Automovel();
 	private List<Automovel> automovels;
 
@@ -20,12 +25,14 @@ public class AutomovelBean {
 		entityManager.persist(this.getAutomovel());
 		entityManager.getTransaction().commit();
 		this.setAutomovel(new Automovel());
-		return "cadastrarAutomoveis?faces-redirect?true";
+		listarAutomoveis();
+		return "listarAutomoveis?faces-redirect?true";
 	}
 
 	public List<Automovel> listarAutomoveis() {
 		EntityManager entityManager = JPAUtil.pegarEntityManager();
-		this.automovels = entityManager.createQuery("From Automovel", Automovel.class).getResultList();
+		Query q = entityManager.createQuery("select a from Automovel a", Automovel.class);
+		this.automovels = q.getResultList();
 		entityManager.close();
 		return automovels;
 	}
