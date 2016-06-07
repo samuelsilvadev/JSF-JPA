@@ -3,7 +3,6 @@ package study.java.controllers;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
-import javax.management.Query;
 import javax.persistence.EntityManager;
 
 import study.java.model.Automovel;
