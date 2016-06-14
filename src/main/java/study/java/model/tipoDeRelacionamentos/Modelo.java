@@ -14,9 +14,11 @@ public class Modelo {
 	@Id
 	@GeneratedValue
 	private Integer pk;
-	
-	@ManyToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="fkmarca", foreignKey = @ForeignKey(name="fk_marca"))
+
+	private String modelo;
+
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "fkmarca", foreignKey = @ForeignKey(name = "fk_marca") )
 	private Marca fkmarca;
 
 	public Integer getPk() {
@@ -30,4 +32,13 @@ public class Modelo {
 	public void setFkmarca(Marca fkmarca) {
 		this.fkmarca = fkmarca;
 	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
 }
