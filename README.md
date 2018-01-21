@@ -1,2 +1,24 @@
 # JSF-JPA
- Projeto sendo feito com a ajuda da apostíla JSF-JPA da casa do Código <a href="https://www.casadocodigo.com.br/products/livro-jsf-jpa" target="_blank">CASA DO CODIGO</a>
+
+This project is only to study.
+
+- JSF
+- JPA
+- Java
+
+## How to install
+
+- git clone
+- Import inside your favorite IDE
+- Modify file [persistence.xml](https://github.com/samuelsilvadev/JSF-JPA/blob/master/src/main/java/META-INF/persistence.xml) with your configurations
+- Create a database with the name that you put in the persistence file
+- Just it!!
+
+## Contact
+
+- samuelsilvawb@gmail.com
+- [@samuelsilvadev](https://twitter.com/samuelsilvadev)
+
+## License
+
+[MIT](https://github.com/samuelsilvadev/JSF-JPA/blob/master/LICENSE.md)
